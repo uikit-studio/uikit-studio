@@ -39,9 +39,40 @@ uikit add dashboard
 uikit validate
 ```
 
-## Authoring & submitting a kit
+## Author a kit — the full loop
 
-See the full guide at <https://uikit.studio/submit>.
+The whole lifecycle, copy‑paste:
+
+```bash
+# 1 · Scaffold — fork an existing kit and reskin it (fastest start)
+npx uikit-studio new ./aurora-uikit my-kit      # local path, or a git URL
+cd my-kit/react
+
+# 2 · Develop — it's a real Vite app
+pnpm install
+pnpm dev                                         # edit & see live
+
+# 3 · Reskin — give it its OWN identity:
+#     design/theme.css + design/tokens.json  (colors, fonts, radius)
+#     react/src/routes/*  and  react/src/i18n/*  (pages + EN/AR copy)
+
+# 4 · Validate the contract
+cd ..                                            # kit root
+npx uikit-studio validate                        # must pass
+npx uikit-studio info                            # preview tech/templates
+
+# 5 · Ship its own repo
+git init -b main && git add -A && git commit -m "my-kit"
+gh repo create <you>/my-kit --public --source=. --push
+```
+
+Then **list it in the gallery**: open a PR adding `apps/web/content/kits/<id>.json`
+to [`uikit-studio/uikit`](https://github.com/uikit-studio/uikit). CI validates it; a
+maintainer merges; it's live. Full guide: <https://uikit.studio/submit>.
+
+> A kit must **run out of the box** and be a full product (landing, pricing,
+> dashboard, components showcase), with a real design system (light + dark) and
+> EN/AR + RTL. Pick a fresh identity — never copy another kit's theme.
 
 ## What's in this repo
 

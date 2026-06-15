@@ -35,7 +35,9 @@ export async function newKit(args: string[]): Promise<number> {
     log.step(`copy ${source}`);
     await cp(src, dest, {
       recursive: true,
-      filter: (s) => !s.includes("/.git") && !s.includes("/node_modules"),
+      // Skip the .git/ and node_modules/ directories — but keep dotfiles like
+      // .gitignore / .github (a plain "/.git" substring check would drop those).
+      filter: (s) => !/\/(\.git|node_modules)(\/|$)/.test(s),
     });
   }
   log.ok(`created ${dir}`);
