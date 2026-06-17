@@ -25,7 +25,7 @@ recognizable as the same layout.
    \`uikit.json\` (id, name, description, fonts, palette), and the consumer skill.
 
 ## Then
-- \`npx uikit-studio validate\` passes.
+- \`npx uikit-cli validate\` passes.
 - Capture fresh screenshots; update the README.
 - Push and list it at https://uikit.studio/submit
 

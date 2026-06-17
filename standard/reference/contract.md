@@ -1,6 +1,6 @@
 # The contract (`uikit.json`) — what a kit must declare
 
-Validated by `@uikit/manifest` (Zod + JSON Schema). Run `npx uikit-studio validate`.
+Validated by `@uikit/manifest` (Zod + JSON Schema). Run `npx uikit-cli validate`.
 
 ## Required (the floor)
 

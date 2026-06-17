@@ -53,7 +53,7 @@
     "skillName": "aurora-ui",
     "steps": [
       "git clone https://github.com/uikit-studio/aurora-uikit my-app",
-      "cd my-app && npx uikit-studio init",
+      "cd my-app && npx uikit-cli init",
       "Open in Claude Code and ask: 'build a billing dashboard using this kit'"
     ],
     "entry": "USAGE.md",
@@ -71,7 +71,7 @@
   },
 
   "registry": {
-    "install": "npx uikit-studio add aurora",
+    "install": "npx uikit-cli add aurora",
     "components": "registry/index.json"
   }
 }

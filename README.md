@@ -1,4 +1,4 @@
-# uikit-studio
+# uikit-cli
 
 The `uikit` CLI — scaffold, validate, and add UI kits from the
 [uikit.studio](https://uikit.studio) gallery.
@@ -10,10 +10,10 @@ Claude Code, and copies individual components/templates shadcn-style.
 ## Install
 
 ```bash
-npm i -g uikit-studio   # provides the `uikit` command
+npm i -g uikit-cli   # provides the `uikit` command
 ```
 
-Or run any command one-off with `npx uikit-studio <command>`.
+Or run any command one-off with `npx uikit-cli <command>`.
 
 ## Commands
 
@@ -31,7 +31,7 @@ uikit agent <id|url>      Fetch a kit's agent-readable design spec (--json, --sa
 
 ```bash
 # Start a new app from a kit
-npx uikit-studio new https://github.com/uikit-studio/aurora-uikit my-app
+npx uikit-cli new https://github.com/uikit-studio/aurora-uikit my-app
 cd my-app
 
 # Pull a full template plus every component it depends on
@@ -71,7 +71,7 @@ The whole lifecycle, copy‑paste:
 
 ```bash
 # 1 · Scaffold — fork an existing kit and reskin it (fastest start)
-npx uikit-studio new ./aurora-uikit my-kit      # local path, or a git URL
+npx uikit-cli new ./aurora-uikit my-kit      # local path, or a git URL
 cd my-kit/react
 
 # 2 · Develop — it's a real Vite app
@@ -84,8 +84,8 @@ pnpm dev                                         # edit & see live
 
 # 4 · Validate the contract
 cd ..                                            # kit root
-npx uikit-studio validate                        # must pass
-npx uikit-studio info                            # preview tech/templates
+npx uikit-cli validate                        # must pass
+npx uikit-cli info                            # preview tech/templates
 
 # 5 · Ship its own repo
 git init -b main && git add -A && git commit -m "my-kit"
@@ -103,7 +103,7 @@ maintainer merges; it's live. Full guide: <https://uikit.studio/submit>.
 
 ## What's in this repo
 
-- `src/` — the CLI (published to npm as **uikit-studio**).
+- `src/` — the CLI (published to npm as **uikit-cli**).
 - `src/manifest/` + `schema/` — the **`uikit.json` contract**: the Zod schema, the
   generated JSON Schema, and the validator the CLI runs.
 - `standard/` — **`uikit-standard`**, the Claude Code skill that generates a complete,

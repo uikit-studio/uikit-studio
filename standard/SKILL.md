@@ -39,7 +39,7 @@ A finished kit MUST:
    real component set.
 4. **Support EN + AR with full RTL** — a language toggle, an Arabic typeface, and a
    layout that flips correctly (`dir="rtl"`).
-5. **Validate.** `npx uikit-studio validate` passes.
+5. **Validate.** `npx uikit-cli validate` passes.
 6. **Be agent-ready / consumable by URL.** Ship `AGENTS.md` + `llms.txt` at the repo
    root so another developer's AI agent can reproduce this exact design from one link.
    `llms.txt` is a self-contained design brief (prompt, light + dark tokens, fonts,
@@ -99,7 +99,7 @@ and fonts:
    `uikit add <item>` works into another project.
 8. **Screenshots** → author real images in `screenshots/` (logo + landing required).
 9. **Manifest** → `uikit.json` from [templates/uikit.json](templates/uikit.json),
-   then `npx uikit-studio validate` until it passes.
+   then `npx uikit-cli validate` until it passes.
 10. **Docs + git** → `USAGE.md` (lead with "cd <framework> && pnpm install &&
     pnpm dev"), `prompts/build.md`, `prompts/extend.md`, `README.md`, then `git init`.
 11. **Agent-ready files** → `AGENTS.md` + `llms.txt` at the repo root (design brief +
@@ -118,7 +118,7 @@ ships in `uikit.json` `tech.frameworks`.
 - **Run-it-or-it-doesn't-ship.** Every framework folder runs with `pnpm dev`.
 - **Required pages:** landing · pricing · dashboard · components-showcase.
 - **EN + AR + RTL** are mandatory, not optional.
-- **Validate before done:** `npx uikit-studio validate` passes.
+- **Validate before done:** `npx uikit-cli validate` passes.
 - **Required screenshots:** `logo` + `landing`. Author them.
 - **Never self-declare trust** (`verified` is platform-side only).
 - **Own identity + structure.** New palette + fonts + page composition per kit.

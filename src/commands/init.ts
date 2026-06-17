@@ -16,7 +16,7 @@ style UI** — it has the kit's components, tokens, and rules so the result stay
 consistent and cheap to produce.
 
 - Build with the kit's tokens and components; don't invent new colors or one-off components.
-${entry ? `- Human usage guide: \`${entry}\`.\n` : ""}- Validate the manifest after changes: \`npx uikit-studio validate\`.
+${entry ? `- Human usage guide: \`${entry}\`.\n` : ""}- Validate the manifest after changes: \`npx uikit-cli validate\`.
 ${MARKER_END}`;
 }
 

@@ -11,6 +11,6 @@ consumer skill, screenshots, and a passing `uikit.json`.
 
 It shares the **same contract** (`@uikit/manifest`) as the platform and the `uikit`
 CLI, so what it generates is exactly what the gallery ingests and the CLI consumes —
-they can never drift. The generated kit must pass `npx uikit-studio validate`.
+they can never drift. The generated kit must pass `npx uikit-cli validate`.
 
 The **Aurora** kit (`aurora-uikit`) is the gold-standard reference output.

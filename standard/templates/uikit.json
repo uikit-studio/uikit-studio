@@ -52,7 +52,7 @@
     "skillName": "REPLACE-slug-ui",
     "steps": [
       "git clone https://github.com/REPLACE/REPLACE-uikit my-app",
-      "cd my-app && npx uikit-studio init",
+      "cd my-app && npx uikit-cli init",
       "Open in Claude Code and ask: 'build a dashboard using this kit'"
     ],
     "entry": "USAGE.md",
@@ -69,7 +69,7 @@
   },
 
   "registry": {
-    "install": "npx uikit-studio add REPLACE-slug",
+    "install": "npx uikit-cli add REPLACE-slug",
     "components": "registry/index.json"
   }
 }
